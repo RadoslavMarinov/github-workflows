@@ -40,12 +40,13 @@ jobs:
     
     steps:
       - name: Test Node.js script
-        uses: actions/github-script@v6
         id: "test_node_script"
-        script: |
-          const myName ="Riko"
-          console.log("My name is " + myName)
-          console.log(context)
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const myName ="Riko"
+            console.log("My name is " + myName)
+            console.log(context)
           
           
         
