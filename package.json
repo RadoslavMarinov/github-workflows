@@ -1,0 +1,19 @@
+{
+  "name": "github-workflows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "do:sum": "ts-node src/tools/sum.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.28",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2"
+  }
+}

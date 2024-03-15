@@ -17,35 +17,19 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    name: "Build"
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        node: [ 14, 16, 18 ]
+    name: Node ${{ matrix.node }} sample
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-  run_script:
-    name: "Run Node.js script"
-    needs: [build]
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Test Node.js script
-        id: "test_node_script"
-        uses: actions/github-script@v6
+      - uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          script: |
-            const myName ="Riko"
-            console.log("My name is " + myName)
-            console.log(context)
-          
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run do:sum
+      - run: npm test
           
         
