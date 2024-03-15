@@ -1,0 +1,11 @@
+name: Manually Triggered Workflow
+
+on:
+    workflow_dispatch:
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "We did it"
