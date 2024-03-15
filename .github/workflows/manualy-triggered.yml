@@ -7,5 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "We did it"
+      - name: Say Something
+        run: |
+          echo "We did it"
