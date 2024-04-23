@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "do:sum": "ts-node src/tools/sum.ts",
-    "whoami":  "ts-node src/tools/whoami.ts"
+    "whoami": "ts-node src/tools/whoami.ts"
   },
   "keywords": [],
   "author": "",
