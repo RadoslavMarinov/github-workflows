@@ -34,6 +34,7 @@ jobs:
         run: |
           echo "${{vars.NODE_ENV}}"
           echo "workflow node env: $node_env"
+          excho "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
       - run: npm run do:sum
       - run: npm test
       
