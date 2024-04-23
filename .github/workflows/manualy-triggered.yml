@@ -2,16 +2,16 @@ name: Manually Triggered Workflow
 
 on:
   push:
-    branches: [ "main" ]
+    # branches: [ "main" ]
 
-  # workflow_dispatch:
+  workflow_dispatch:
 env:
   env_var: ${{ vars.TEST_VARIABLE }}
 
 
 jobs: 
   deploy:
-    environment: test
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Say Something
@@ -19,5 +19,4 @@ jobs:
           echo "We did it"
       - name: printVar
         run: |
-            echo "VARIABLESAAA $TEST_VARIABLE"
             echo "variable from shell environment : $env_var"
