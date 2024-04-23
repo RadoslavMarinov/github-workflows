@@ -12,11 +12,15 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  node_env: ${{ vars.NODE_ENV }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
+    environment: prod # tels from which environment to take the 'vars' and the 'secrets' from
     runs-on: ubuntu-latest
     name: Node 18
     steps:
@@ -26,9 +30,11 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
+      - name: Set env
+        run: |
+          echo "${vars.NODE_ENV}"
+          echo "NODE_ENV=$(echo "${vars.NODE_ENV})" >> $GITHUB_ENV
       - run: npm run do:sum
-        env:
-          NODE_ENV: 'TEST'
       - run: npm test
       
           
