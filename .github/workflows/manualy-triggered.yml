@@ -13,4 +13,4 @@ jobs:
           echo "We did it"
       - name: printVar
         run: |
-            echo VARIABLES $TEST_VARIABLE
+            echo "VARIABLES $TEST_VARIABLE"
