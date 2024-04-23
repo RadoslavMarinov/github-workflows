@@ -36,6 +36,8 @@ jobs:
           echo "${{vars.NODE_ENV}}"
           echo "workflow node env: $node_env"
           echo "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
+          ENV=$(npx ts-node src/tools/whoami.ts)
+          echo ENV -> $ENV
           echo "AUTH_TOKEN=${{secrets.MY_SECRET}}" >>  $GITHUB_ENV
           echo "RIKOTECH=$(echo Rolkppp)"  >>  $GITHUB_ENV
       - run: npm run do:sum
