@@ -5,6 +5,9 @@ on:
     branches: [ "main" ]
 
   # workflow_dispatch:
+env:
+  env_var: ${{ vars.TEST_VARIABLE }}
+
 
 jobs: 
   deploy:
@@ -17,3 +20,4 @@ jobs:
       - name: printVar
         run: |
             echo "VARIABLESAAA $TEST_VARIABLE"
+            echo "variable from shell environment : $env_var"
