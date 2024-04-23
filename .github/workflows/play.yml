@@ -34,7 +34,6 @@ jobs:
         run: |
           pwd
           echo "${{vars.NODE_ENV}}"
-          echo "workflow node env: $node_env"
           echo "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
           ENV=$(npx ts-node src/tools/whoami.ts)
           echo ENV -> $ENV
