@@ -1,5 +1,5 @@
 function main() {
-  console.log("🥳 GAAABYYY 🥳");
+  console.log("🥳🥳 GAAABYYY 🥳🥳");
   // return "SONYAAA";
 }
 
