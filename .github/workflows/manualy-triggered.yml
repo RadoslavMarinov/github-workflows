@@ -10,3 +10,6 @@ jobs:
       - name: Say Something
         run: |
           echo "We did it"
+      - name: printVar
+        run: |
+            echo VARIABLES $TEST_VARIABLE
