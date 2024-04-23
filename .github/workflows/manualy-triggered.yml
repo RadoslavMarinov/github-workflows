@@ -16,4 +16,4 @@ jobs:
           echo "We did it"
       - name: printVar
         run: |
-            echo "VARIABLES $TEST_VARIABLE"
+            echo "VARIABLESAAA $TEST_VARIABLE"
