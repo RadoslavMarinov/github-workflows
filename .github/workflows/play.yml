@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - name: Set env
+      - name: SET ENV
         run: |
           pwd
           echo "${{vars.NODE_ENV}}"
