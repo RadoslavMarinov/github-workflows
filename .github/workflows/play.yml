@@ -35,7 +35,6 @@ jobs:
           pwd
           echo "${{vars.NODE_ENV}}"
           echo "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
-          # ENV=$(npx ts-node src/tools/whoami.ts)
           echo "AUTH_TOKEN=${{secrets.MY_SECRET}}" >>  $GITHUB_ENV
           echo "WHOAMI=$(echo $(npx ts-node src/tools/whoami.ts))"  >>  $GITHUB_ENV
       - run: npm run do:sum
