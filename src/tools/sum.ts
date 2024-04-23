@@ -11,3 +11,4 @@ async function main(args: string[]) {
 }
 
 main(process.argv);
+export {};
