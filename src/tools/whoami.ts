@@ -1,6 +1,6 @@
 function main() {
-  console.log("RikoooOOoo");
-  return "SONYAAA";
+  console.log("SONYAAA");
+  // return "SONYAAA";
 }
 
 main();
