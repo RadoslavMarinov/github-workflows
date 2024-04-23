@@ -27,9 +27,9 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npm run do:sum
-      - run: npm test
         env:
           NODE_ENV: 'TEST'
+      - run: npm test
       
           
         
