@@ -33,6 +33,7 @@ jobs:
       - name: Set env
         run: |
           echo "${{vars.NODE_ENV}}"
+          echo "workflow node env: $node_env"
       - run: npm run do:sum
       - run: npm test
       

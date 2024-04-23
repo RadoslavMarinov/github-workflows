@@ -18,6 +18,6 @@ jobs:
           echo "We did it"
       - name: printVar
         env:
-          RIKOO: +env_var
+          RIKOO: env_var
         run: |
             echo "variable from shell environment : $env_var"
