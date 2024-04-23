@@ -32,8 +32,7 @@ jobs:
       - run: npm ci
       - name: Set env
         run: |
-          echo "${vars.NODE_ENV}"
-          echo "NODE_ENV=$(echo "${vars.NODE_ENV})" >> $GITHUB_ENV
+          echo "${{vars.NODE_ENV}}"
       - run: npm run do:sum
       - run: npm test
       
