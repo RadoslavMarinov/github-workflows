@@ -1,22 +1,23 @@
 name: Manually Triggered Workflow
 
 on:
-  push:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
 
   workflow_dispatch:
 env:
   env_var: ${{ vars.TEST_VARIABLE }}
 
-
 jobs: 
   deploy:
-    environment: tests
+    environment: test
     runs-on: ubuntu-latest
     steps:
       - name: Say Something
         run: |
           echo "We did it"
       - name: printVar
+        env:
+          RIKOO: +env_var
         run: |
             echo "variable from shell environment : $env_var"
