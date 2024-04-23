@@ -38,7 +38,7 @@ jobs:
           echo "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
           echo "AUTH_TOKEN=${{secrets.MY_SECRET}}" >>  $GITHUB_ENV
           echo $(npm run whoami)
-          echo "USER=$(npm run whoami)"  >>  $GITHUB_ENV
+          # echo "USER=$(npm run whoami)"  >>  $GITHUB_ENV
       - run: npm run do:sum
       - run: npm test
       
