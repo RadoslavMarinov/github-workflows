@@ -5,7 +5,7 @@ async function main(args: string[]) {
   } else {
     console.log(`❌  Noooo  = `, process.env.AUTH_TOKEN);
   }
-  console.log(`👉 RIKOTECH = `, process.env.RIKOTECH);
+  console.log(`🚀 WHOAMI = `, process.env.WHOAMI);
   console.log(`👉 Runing script: `, args[0]);
   console.log(`👉 With arguments: `, args.slice(2).join(","));
 }
