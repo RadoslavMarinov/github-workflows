@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "do:sum": "ts-node src/tools/sum.ts",
+    "do:sum": "ts-node src/tools/sum.ts arg1='arg1 value'",
     "whoami": "ts-node src/tools/whoami.ts"
   },
   "keywords": [],
