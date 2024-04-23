@@ -37,9 +37,9 @@ jobs:
           echo "workflow node env: $node_env"
           echo "NODE_ENV=${{vars.NODE_ENV}}" >>  $GITHUB_ENV
           echo "AUTH_TOKEN=${{secrets.MY_SECRET}}" >>  $GITHUB_ENV
-          export USER_NAME=$(npm run whoami)
-          echo $USER_NAME
-          # echo "USER=$$USER_NAME"  >>  $GITHUB_ENV
+          export RIKOTECH=$(npm run whoami)
+          echo $RIKOTECH
+          # echo "RIKOTECH=$RIKOTECH"  >>  $GITHUB_ENV
       - run: npm run do:sum
       - run: npm test
       
