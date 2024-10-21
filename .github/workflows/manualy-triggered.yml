@@ -5,12 +5,17 @@ on:
   #   branches: [ "main" ]
 
   workflow_dispatch:
+    inputs:
+      environment:
+      description: The name of the GitHub environment
+      type: string
+      default: test
 env:
   env_var: ${{ vars.TEST_VARIABLE }}
 
 jobs: 
   deploy:
-    environment: test
+    environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     steps:
       - name: Say Something
